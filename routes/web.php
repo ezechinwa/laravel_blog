@@ -20,21 +20,5 @@ use App\Models\Post;
 Route::get('/', [PostController::class,'index']);
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
 
-Route::get('categories/{category:slug}', function (Category $category ){
-    return view('posts',[
-        'posts'=> $category->posts,
-        "categories" => Category::all()
-    ]);
-});
-
-Route::get('user/posts/{user:username}', function (User $user ){
-    return view('posts',[
-        'posts'=> $user->posts
-    ]);
-});
 
 
-Route::get('test', function (Post $post ){
-      return $post::find(1);
-});
-//

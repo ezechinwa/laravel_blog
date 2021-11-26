@@ -37,8 +37,8 @@
                 <div class="flex items-center text-sm">
                     <img src="/images/lary-avatar.svg" alt="Lary avatar">
                     <div class="ml-3">
-                        <h5 class="font-bold">{{$post->user->full_name}}</h5>
-                        <h6>Mascot at Laracasts</h6>
+
+                        <h5 class="font-bold"> <a href="/?username={{$post->user->username}}">{{$post->user->full_name}} </a> </h5>
                     </div>
                 </div>
 
